@@ -2,7 +2,7 @@ import os
 import pickle
 import pandas as pd
 import numpy as np
-from flask import Flask, render_template, request, jsonify, url_for
+from flask import Flask, render_template, request, jsonify, url_for, redirect
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from datetime import datetime, timedelta
@@ -176,9 +176,13 @@ def result_page():
         return render_template('index.html')
     return render_template('result.html', **last_prediction_context)
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
     global last_prediction_context
+    
+    if request.method == 'GET':
+        return redirect(url_for('home'))
+
     if model is None:
         return render_template('error.html', message="Model not available.")
 
@@ -241,7 +245,7 @@ def predict():
             'daily_hours': features[7]
         }
         
-        return render_template('result.html', **last_prediction_context)
+        return redirect(url_for('result_page'))
                                
     except Exception as e:
         print(f"Prediction error: {e}")
@@ -287,7 +291,7 @@ def predict():
             'daily_hours': sh
         }
 
-        return render_template('result.html', **last_prediction_context)
+        return redirect(url_for('result_page'))
 
 @app.route('/planner', methods=['GET', 'POST'])
 def planner():
