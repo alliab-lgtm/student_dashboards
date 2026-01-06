@@ -826,6 +826,9 @@ def get_iq_history():
 
 
 
+# Initialize model on startup
+load_or_train_model()
+
 if __name__ == "__main__":
-    load_or_train_model()
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
