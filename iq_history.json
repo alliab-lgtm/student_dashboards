@@ -1,0 +1,86 @@
+[
+    {
+        "date": "2026-01-06 14:33:02",
+        "level": "1",
+        "raw_score": 80.0,
+        "bonus": 0,
+        "score": 80.0,
+        "correct": 8,
+        "total": 10,
+        "time_spent": 69,
+        "category_performance": {
+            "Number Series": {
+                "correct": 1,
+                "total": 2
+            },
+            "Pattern": {
+                "correct": 1,
+                "total": 1
+            },
+            "Math": {
+                "correct": 2,
+                "total": 2
+            },
+            "Verbal": {
+                "correct": 1,
+                "total": 2
+            },
+            "Analogy": {
+                "correct": 1,
+                "total": 1
+            },
+            "Geometry": {
+                "correct": 1,
+                "total": 1
+            },
+            "Logic": {
+                "correct": 1,
+                "total": 1
+            }
+        }
+    },
+    {
+        "date": "2026-01-06 14:34:47",
+        "level": "2",
+        "raw_score": 70.0,
+        "bonus": 5,
+        "score": 75.0,
+        "correct": 7,
+        "total": 10,
+        "time_spent": 102,
+        "category_performance": {
+            "Coding-Decoding": {
+                "correct": 1,
+                "total": 1
+            },
+            "Logical Reasoning": {
+                "correct": 0,
+                "total": 2
+            },
+            "Verbal": {
+                "correct": 2,
+                "total": 2
+            },
+            "Number Series": {
+                "correct": 1,
+                "total": 1
+            },
+            "Analogy": {
+                "correct": 0,
+                "total": 1
+            },
+            "Math": {
+                "correct": 1,
+                "total": 1
+            },
+            "Direction": {
+                "correct": 1,
+                "total": 1
+            },
+            "Classification": {
+                "correct": 1,
+                "total": 1
+            }
+        }
+    }
+]
